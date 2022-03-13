@@ -1,36 +1,24 @@
-// //String функция
-// let x = String(111);
-// x = String(2 + 2);
-// x = String(false);
-// x = new Date();
-// x = String(["one", "two", "three"]);
+const firstNumber = 50;
+const secondNumber = 10;
+let result;
+//simple math operation
+result = firstNumber + secondNumber;
+result = firstNumber - secondNumber;
+result = firstNumber * secondNumber;
+result = firstNumber / secondNumber;
+result = firstNumber % secondNumber;
 
-// //toString() метод
-// x = (35).toString();
-// x = true.toString();
+//Math object
+result = Math.PI;
+result = Math.round(3.3); //округление
+result = Math.ceil(3.3); // округление потолок
+result = Math.floor(3.8); // округление пол
+result = Math.sqrt(9); //корень
+result = Math.abs(-7); //модуль
+result = Math.pow(2, 3); // степень
+result = Math.min(2, 3, 50, -10); // мин
+result = Math.max(2, 3, 18); // макс
+result = Math.random(); // макс
+result = Math.floor(Math.random() * 100) + 1; // макс
 
-// console.log(x);
-// console.log(typeof x);
-// console.log(x.length);
-
-// //Number function
-// let y = 10;
-// y = Number(false); //1
-// y = Number(null); //0
-// y = Number("text"); //error
-// y = Number([1, 2, 3]); //error
-
-// //parseInt parseFloat metod
-// y = parseInt("123,123"); // целое число
-// y = parseFloat("123,123"); // дробное число
-
-// console.log(y);
-// console.log(typeof y);
-// console.log(y.toPrecision(4));
-
-const x = 5;
-const y = 3;
-const z = x + y;
-
-console.log(z);
-console.log(typeOf z);
+console.log(result);
