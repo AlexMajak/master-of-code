@@ -67,5 +67,5 @@ function printBonus(dept1, dept2) {
 
 
 let result1 = printBonus(deptOne, deptTwo);
-// console.log(printBonus(deptOne, deptTwo)); 
+// console.log(printBonus(deptOne, deptTwo));
 let result2 = printBonus(deptOneSecond, deptTwoSecond);
