@@ -1,90 +1,126 @@
-const color = 'white';
+// // Expressions
 
-// if (color == 'green') {
-// 	console.log('Go!');
-// } else if (color == 'yellow') {
-// 	console.log('Get ready!');
-// } else if (color == 'red') {
-// 	console.log('Stop!');
-// } else {
-// 	console.log('Incorrect color!');
+// 2 + 2
+// 37
+// true && false
+// // Statements
+
+// const number = 10;
+
+// if (number > 0) {
+// 	const text = 'The number is positive';
 // }
 
-let divHeader = document.createElement("div");
-let divColors = document.createElement("div");
-// let colors = document.querySelector('.divColors');
-// let header = document.querySelector('.divHeader');
-divColors.className = 'colors';
-divHeader.className = 'header';
+// console.log(`${number - 2} is also positive number.`);
 
 
-let body = document.querySelector("body");
-body.appendChild(divColors);
-body.appendChild(divHeader);
-let result = '';
+// Тернарный (условный) оператор
 
-let colorName = function (color) {
+// const money = 100;
+// const cost = 500;
 
-	switch (color) {
-		case 'green':
-			result = console.log('Go!');
-			divColors.style.backgroundColor = 'green';
-			divHeader.style.color = 'green';
-			break;
-		case 'yellow':
-			result = console.log('Get ready!');
-			divColors.style.backgroundColor = 'yellow';
-			divHeader.style.color = 'yellow';
-			break;
-		case 'red':
-			result = console.log('Stop');
-			divColors.style.backgroundColor = 'red';
-			divHeader.style.color = 'red';
-			break;
-		case 'white':
-			result = console.log('zvezda')
-			divColors.style.backgroundColor = 'white';
-			divHeader.style.color = 'white';
-			break
-		default:
-			result = console.log('Incorrect');
-			divColors.className = 'colors';
-			divHeader.style.color = 'black';
-			break;
-			return result;
-	}
+// // money >= cost ? console.log('you can by it') : console.log('you can not buy it.');
+// const canYouBuyIt = money >= cost ? console.log('you can by it') : console.log('you can not buy it.');
 
+// console.log(canYouBuyIt);
+
+
+// let canYouBuyIt1;
+// if (money >= cost) {
+// 	canYouBuyIt1 = 'You can buy it'
+// } else {
+// 	canYouBuyIt1 = 'You can not buy it'
+// }
+
+// console.log(`You can ${money >= cost ? 'yes' : 'not'} by it`);
+
+// let oldYears = prompt('Введите Ваш возраст');
+// const buyAlcohol = oldYears >= 18 ? 'You can buy alcohol' : 'You can not buy alcohol';
+// console.log(buyAlcohol);
+// alert(buyAlcohol);
+'use strict'
+// let hasCertificate = false;
+// const passExam = true;
+
+// if (passExam) hasCertificate = true;
+// if (hasCertificate) console.log('Wow!');
+
+// // const interface = 'Video';
+// const package = 'Video2';
+
+// function printText() {
+// 	console.table('Hello to everyone!');
+// }
+// // printText();
+
+// let number = 100;
+// let i = 1;
+// while (i <= number) {
+// 	printText();
+// 	i += 1;
+// }
+
+// function colorizer(item, color, colorCode) {
+// 	// console.log(item, color);
+// 	const colorizedItem = `The ${item} is ${color}. The cod of the color is ${colorCode}`;
+// 	// console.log(colorizedItem);
+// 	return colorizedItem;
+// }
+
+// const messageFromColorizer = colorizer('desk', 'red', 99);
+
+// console.log(`We have the following message: ${messageFromColorizer}`);
+
+
+// const messageFromColorizer2 = colorizer('hand', 'green', 10); console.log(`We have the following message: ${messageFromColorizer2}`);
+
+//Don't Repeat Yourself - DRY
+
+// function printText() {
+// 	console.log('Hello to everyone!');
+// }
+
+// printText(5, 10);
+// printText();
+// printText();
+
+// const number = Number('79');
+// console.log(number);
+
+//function declaration vs expression
+
+//declaration можно вызвать до определения
+function getAge(birthYear, yearNow) {
+	// const age = yearNow - birthYear;
+	return yearNow - birthYear;
 }
 
-console.log(colorName("red"));
+const myAge = getAge(1982, 2022)
+console.log(myAge);
 
-divHeader.innerText = "result";
-
-
-const weekday = 'sunday';
-
-switch (weekday) {
-	case "monday":
-		console.log("Keep calm and pretend it's not monday.");
-		break;
-	case "tuesday":
-		console.log("Keep calm and pretend it's not tuesday.");
-		break;
-	case "wednesday":
-		console.log("Keep calm and pretend it's not wednesday.");
-		break;
-	case "thursday":
-		console.log("Keep calm and pretend it's not thursday.");
-		break;
-	case "friday":
-		console.log("Keep calm and pretend it's not friday.");
-		break;
-	case "saturday":
-	case "sunday":
-		console.log("Keep calm and pretend it's not sunday.");
-		break;
-
-	default:
-		console.log("This is not " + "a weekday I know..")
-
+//expression
+const getAgeTwo = function (birthYear, yearNow) {
+	return yearNow - birthYear;
 }
+
+const myAgeTwo = getAgeTwo(1985, 2022);
+console.log(myAgeTwo);
+
+//arrow functions
+
+// const getAgeThree = (birthYear, yearNow) => {
+// 	return yearNow - birthYear;
+// }
+const getAgeThree = (birthYear, yearNow) =>
+	yearNow - birthYear;
+
+// const myAgeThree = getAgeThree(1985, 2020);
+const myAgeThree = getAgeThree(1985, 2020);
+console.log(myAgeThree);
+
+const canBuyAlcohol = (birthYear, yearNow) => {
+	const age = yearNow - birthYear;
+	const isPersonOlderThan = age >= 21 ? console.log("You can buy the alcohol") : console.log("You can not buy the alcohol");
+}
+
+canBuyAlcohol(1982, 2022);
