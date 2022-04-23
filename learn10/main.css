@@ -11,34 +11,128 @@ html {
 	box-sizing: inherit;
 }
 
-.colors {
-	width: 100px;
-	height: 100px;
-	margin: 0 auto;
+.wrapper {
+	/* width: 800px;
+	height: 200px; */
 	margin-top: 50px;
-	border-color: bisque;
-	border: 1px coral solid;
-	border-radius: 50%;
-}
-
-.white {
-	background-color: white;
-}
-.red {
-	background-color: red;
-}
-.green {
-	background-color: green;
-}
-.yellow {
-	background-color: yellow;
-}
-
-.header {
+	display: flex;
+	flex-direction: column;
 	text-align: center;
-	font-family: "Courier New", Courier, monospace;
-	font-weight: bold;
-	font-size: 20px;
-	margin: 50px;
-	text-transform: capitalize;
+	margin: 20px;
+	justify-content: center;
+	align-items: center;
+}
+
+.dept-one {
+	display: flex;
+	flex-wrap: nowrap;
+	background-color: rgb(99, 133, 168);
+}
+
+.dept-one > div {
+	background-color: #f1f1f1;
+	margin: 10px;
+	text-align: center;
+	line-height: 15px;
+	font-size: 16px;
+}
+
+.dept-two {
+	display: flex;
+	flex-wrap: nowrap;
+	background-color: rgb(99, 133, 168);
+}
+
+.dept-two > div {
+	background-color: #f1f1f1;
+	margin: 10px;
+	text-align: center;
+	line-height: 15px;
+	font-size: 16px;
+}
+
+.dept-month {
+	display: flex;
+	flex-wrap: nowrap;
+	background-color: rgb(99, 133, 168);
+	/* width: 600px; */
+}
+.dept-month-second {
+	display: flex;
+	flex-wrap: nowrap;
+	background-color: rgb(99, 133, 168);
+	/* width: 600px; */
+}
+
+.dept-month > div {
+	background-color: #f1f1f1;
+	margin: 10px;
+	text-align: center;
+	line-height: 15px;
+	font-size: 16px;
+	justify-content: space-around;
+	margin-left: 55px;
+	margin-right: 62.5px;
+}
+
+.dept-month-second > div {
+	background-color: #f1f1f1;
+	margin: 10px;
+	text-align: center;
+	line-height: 15px;
+	font-size: 16px;
+	justify-content: space-around;
+	margin-left: 71px;
+	margin-right: 69px;
+}
+
+.wrapper-second {
+	/* width: 800px;
+	height: 200px; */
+	margin-top: 50px;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	margin: 20px;
+	justify-content: center;
+	align-items: center;
+}
+
+.dept-one-second {
+	display: flex;
+	flex-wrap: nowrap;
+	background-color: rgb(99, 133, 168);
+}
+
+.dept-one-second > div {
+	background-color: #f1f1f1;
+	margin: 10px;
+	text-align: center;
+	line-height: 15px;
+	font-size: 16px;
+}
+
+.dept-two-second {
+	display: flex;
+	flex-wrap: nowrap;
+	background-color: rgb(99, 133, 168);
+}
+
+.dept-two-second > div {
+	background-color: #f1f1f1;
+	margin: 10px;
+	text-align: center;
+	line-height: 15px;
+	font-size: 16px;
+}
+
+.res {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.res > div {
+	margin: 10px;
 }
