@@ -449,12 +449,7 @@ calculateAverage(arr2);
 
 
 
-// const dataTips = [calculateTips(dataBill[0]), calculateTips(dataBill[1]), calculateTips(dataBill[2])];
-// const dataAll = [dataBill[0] + dataTips[0], dataBill[1] + dataTips[1], dataBill[2] + dataTips[2]];
 
-// console.log(dataBill);
-// console.log(dataTips);
-// console.log(dataAll);
 
 
 
