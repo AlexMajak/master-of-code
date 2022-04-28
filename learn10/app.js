@@ -286,9 +286,179 @@ const textData = function () {
 textData();
 // console.log(`${friendJack.firstName} ${friendJack.lastName} BMI(${friendJack.bmi()}) is higer than ${friendMike.firstName} ${friendMike.lastName} (${friendMike.bmi()})!`)
 
-console.log('Push ups repetition 1');
-console.log('Push ups repetition 2');
-console.log('Push ups repetition 3');
-console.log('Push ups repetition 4');
-console.log('Push ups repetition 5');
-console.log('Push ups repetition 6');
+// console.log('Push ups repetition 1');
+// console.log('Push ups repetition 2');
+// console.log('Push ups repetition 3');
+// console.log('Push ups repetition 4');
+// console.log('Push ups repetition 5');
+// console.log('Push ups repetition 6');
+
+
+
+for (let rep = 1; rep <= 10; rep++) {
+	console.log(`Push ups repetition ${rep}`)
+};
+
+
+const user123 = ['Sanya', 'Allakherdov', 1974, 'developer', ['Irina', 'Michael'], false];
+
+const types = [];
+
+for (let index = 0; index < user123.length; index++) {
+	const element = user123[index];
+	console.log(element, typeof element);
+	// types[index] = typeof user123[index];
+	// types.push(typeof user123[index]);
+	types.unshift(typeof user123[index]);
+};
+
+console.log(types);
+
+
+const birthYears = [1974, 1994, 2000, 2003];
+
+const agesPeople = [];
+
+const currentDate = new Date();
+const currentYear = currentDate.getFullYear();
+
+for (let i = 0; i < birthYears.length; i++) {
+	// agesPeople[i] = currentYear - birthYears[i];
+	agesPeople.push(currentYear - birthYears[i]);
+	// agesPeople.unshift(currentYear - birthYears[i]);
+}
+console.log(agesPeople);
+
+//continue & break
+
+const user321 = ['Sanya', 'Alex', 1982, 'developer', ['Dasha', 'Demid'], true];
+
+console.log('CONTINUE EXAMPLE');
+
+for (let i = 0; i < user321.length; i++) {
+	if (typeof user321[i] !== 'string') continue;
+	console.log(user321[i], typeof user321[i]);
+}
+
+console.log('BREAK EXAMPLE');
+
+for (let i = 0; i < user321.length; i++) {
+	if (typeof user321[i] === 'number') break;
+	console.log(user321[i], typeof user321[i]);
+}
+
+//итерация в обратном порядке backwards iteration
+
+console.log('BACKWARDS ITERATION');
+
+for (let i = user123.length - 1; i >= 0; i--) {
+	console.log(i, user123[i]);
+}
+
+//loop in loop
+console.log('LOOP IN LOOP');
+
+for (let exercise = 1; exercise <= 3; exercise++) {
+	console.log(`Exercise ${exercise}`);
+	for (let repetition = 1; repetition < 6; repetition++) {
+		console.log(`Exercise ${exercise} - Repetition ${repetition}`)
+	}
+}
+
+//loop while
+console.log('FOR LOOP');
+for (let rep = 0; rep < user123.length; rep++) {
+	console.log(`Push ups repetition ${rep}`);
+}
+
+console.log('FOR WHILE');
+let rep = 1
+while (rep <= 10) {
+	console.log(` While Push ups repetition ${rep}`);
+	rep++;
+	break;
+}
+
+console.log('DICE');
+// let diceNumber = Math.ceil(Math.random() * 6);
+let diceNumber = Math.trunc(Math.random() * 6) + 1;
+console.log(`Dice number before loop: ${diceNumber}`);
+
+while (diceNumber !== 6) {
+	console.log(diceNumber);
+	diceNumber = Math.trunc(Math.random() * 6) + 1;
+	console.log(`Dice number after random creation inside the loop: ${diceNumber}`);
+}
+
+
+// switch (food) {
+// 	case 'sushi':
+// 		break;
+
+// 		break;
+
+// 	default:
+// 		break;
+// }
+
+// 1. Create the bills array containing all 10 bill values
+// 2. Create empty arrays for the tips and the totals (tips and totals)
+// 3. Use the calculateTips() function we wrote before to calculate tips and total values (bill + tips) for every bill value in the bills array. Use a for loop to perform 10 calculations. Call calculateTips() in the loop and use the push() method to add values to the tips and totals arrays.
+// 4.Write a calculateAverage() function than takes an array called arr as a parameter. This function calculates the average of all numbers in a given array. this is difficult task. Here's how to solve it
+
+
+
+
+let tipsArray = [];
+let totalsArray = [];
+let averageArray = [];
+let totalSum = 0;
+
+
+const dataBillArray = [31, 95, 276, 540, 27, 205, 11, 1180, 96, 57];
+
+let calculateTips2 = (bill) => bill < 20 ? bill * 0.2 : bill * 0.15;
+
+function calculateTipsFun() {
+	for (let i = 0; i < dataBillArray.length; i++) {
+		tipsArray.push(Math.trunc(calculateTips2(dataBillArray[i])));
+		// console.log(`tipsArray ${tipsArray}`);
+		totalsArray.push([+tipsArray[i] + +dataBillArray[i]]);
+		// console.log(`totalArray ${totalsArray}`);
+	}
+};
+
+calculateTipsFun();
+console.log(`tipsArray ${tipsArray}`);
+console.log(`totalArray ${totalsArray}`);
+
+const arr2 = [1, 2];
+
+function calculateAverage(arr) {
+	let sum = 0;
+	let result = 0;
+	for (let i = 0; i < arr.length; i++) {
+		sum += arr[i];
+		result = sum / arr.length;
+	}
+	console.log(result);
+};
+
+calculateAverage(arr2);
+
+
+
+
+// const dataTips = [calculateTips(dataBill[0]), calculateTips(dataBill[1]), calculateTips(dataBill[2])];
+// const dataAll = [dataBill[0] + dataTips[0], dataBill[1] + dataTips[1], dataBill[2] + dataTips[2]];
+
+// console.log(dataBill);
+// console.log(dataTips);
+// console.log(dataAll);
+
+
+
+
+
+
+
