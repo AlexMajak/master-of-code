@@ -432,19 +432,23 @@ calculateTipsFun();
 console.log(`tipsArray ${tipsArray}`);
 console.log(`totalArray ${totalsArray}`);
 
-const arr2 = [1, 2];
+const totals = [2, 2];
 
 function calculateAverage(arr) {
 	let sum = 0;
-	let result = 0;
+	// let result = 0;
 	for (let i = 0; i < arr.length; i++) {
-		sum += arr[i];
-		result = sum / arr.length;
+		sum += +arr[i];
+		// result = sum / arr.length;
 	}
-	console.log(result);
+	return sum / arr.length;
+	// console.log(result);
 };
 
-calculateAverage(arr2);
+console.log(calculateAverage(totals));
+console.log(calculateAverage(dataBillArray));
+console.log(calculateAverage(tipsArray));
+console.log(calculateAverage(totalsArray));
 
 
 
